@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư gửi em:)</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&family=Poppins:wght@500;600&display=swap');
+    body {
+      overflow: hidden;
+      background-color: #477879;
+      font-family: 'Dancing Script', cursive;
+    }
+    .box {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+    }
+    .box::before {
+      position: absolute;
+      background-color: #e69c9f;
+      width: 100px;
+      height: 100px;
+      content: "";
+      bottom: 0;
+      left: 0;
+      clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0 100%);
+    }
+    .box::after {
+      position: absolute;
+      width: 100px;
+      background-color: #000;
+      content: "";
+      height: 10px;
+      bottom: -30px;
+      opacity: 0.4;
+      filter: blur(10px);
+    }
+    .content {
+      position: absolute;
+      background-color: #f2eee4;
+      width: 80%;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -10px);
+      height: 80px;
+      transition: 0.5s;
+      /* overflow: hidden;
+      display: flex; */
+    }
+    .designBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #d26f72;
+      display: block;
+      clip-path: polygon(0 0, 50% 35%, 100% 0, 100% 100%, 0 100%);
+    }
+    .designBox::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: #bd5559;
+      content: "";
+      clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    }
+    .box:hover .content {
+      transform: translate(-50%, -30%);
+    }
+    input {
+      position: absolute;
+      left: -10px;
+      opacity: 0;
+    }
+    input:checked ~ .content {
+      bottom: 100px;
+      width: 250px;
+      height: 400px;
+      margin: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .content .title {
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      font-size: x-large;
+      display: none;
+    }
+    .content .description {
+      padding: 10px 20px;
+      display: none;
+    }
+    .content label {
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+    .content img {
+      display: none;
+      opacity: 0;
+      animation: showcontent 1s ease-in-out 0.5s 1 forwards;
+    }
+    input:checked ~ .content img,
+    input:checked ~ .content .title,
+    input:checked ~ .content .description,
+    input:checked ~ .content label {
+      display: block;
+    }
+    input:checked ~ .content .title {
+      animation-delay: 0.7s!important;
+    }
+    input:checked ~ .content .description {
+      animation-delay: 0.9s!important;
+    }
+    input:checked ~ .content label {
+      animation-delay: 0.11s!important;
+    }
+    @keyframes showcontent {
+      from {
+        opacity: 0;
+        transform: translate(0,50PX);
+      } to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <body>
+    <div class="mess">
+      <div class="box">
+        <input type="checkbox" name="" id="message" />
+        <div class="content">
+          <!-- <img src="https://images.unsplash.com/photo-1692364042693-bd5aed6360d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60" alt=""> -->
+          <div class="title">
+            Whatever
+          </div>
+          <div class="description">
+            Next time I will try better! <br>
+            Thankiu everybody
+          </div>
+          <label for="message">
+            Close
+          </label>
+        </div>
+        <label for="message" class="designBox"></label>
+      </div>
+    </div>
+  </body>
+</html>
