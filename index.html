@@ -87,12 +87,22 @@
       left: 50%;
       transform: translate(-50%);
     }
+    .content {
+      padding: 5%;
+    }
     .content .title {
       width: 100%;
       text-align: center;
       font-weight: 700;
       font-size: x-large;
       display: none;
+      opacity: 0;
+    }
+    .content img {
+      display: none;
+      width: 75%;
+      height: 40%;
+      margin: 2% auto;
       opacity: 0;
     }
     .content .description {
@@ -106,25 +116,34 @@
       display: none;
       opacity: 0;
     }
-    .content img {
+    a {
+      text-align: end;
       display: none;
       opacity: 0;
+      margin-right: 10%;
     }
     input:checked ~ .content img,
     input:checked ~ .content .title,
     input:checked ~ .content .description,
-    input:checked ~ .content label {
+    input:checked ~ .content label,
+    input:checked ~ .content a {
       display: block;
       animation: showcontent 0.5s ease-in-out 3s 1 forwards;
     }
     input:checked ~ .content .title {
       animation-delay: 0.5s!important;
     }
-    input:checked ~ .content .description {
+    input:checked ~ .content img {
       animation-delay: 0.7s!important;
     }
-    input:checked ~ .content label {
+    input:checked ~ .content .description {
       animation-delay: 0.9s!important;
+    }
+    input:checked ~ .content label {
+      animation-delay: 1.1s!important;
+    }
+    input:checked ~ .content a {
+      animation-delay: 1.3s!important;
     }
     @keyframes showcontent {
       from {
@@ -140,18 +159,21 @@
       <div class="box">
         <input type="checkbox" name="" id="message" />
         <div class="content">
-          <!-- <img src="https://images.unsplash.com/photo-1692364042693-bd5aed6360d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60" alt=""> -->
           <div class="title">
-            Whateverbigbfdibdibvdfuk
+            Happy Birthday!!
           </div>
+          <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3UzZXdlaDl4MXVrcDAyMXozeXNtM2hhaHRsMXoxeXhzOGxkdGw0MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/kMI3z7b9RWrYQbsXd2/giphy.gif" alt="">
+
           <div class="description">
-            Next time I will try better! <br>
-            Thankiu everybody <br>
-            dfkvdhfldk
+            Chúc cậu sinh nhật vui vẻ nhó😊🥳 <br>
+            Và ngày càng xing đẹp hơn nữa nhé=)) hehee... <br>
+            nhân tiện tớ có chút bí mật nhỏ dành tặng cậu, nếu không phiền cậu có thể xem thử nhé:)
           </div>
+          
           <label for="message">
             Close
           </label>
+          <a href="https://huy0ham.github.io/test/">Bí mật</a>
         </div>
         <label for="message" class="designBox"></label>
       </div>
