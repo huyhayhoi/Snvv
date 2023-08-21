@@ -93,15 +93,18 @@
       font-weight: 700;
       font-size: x-large;
       display: none;
+      opacity: 0;
     }
     .content .description {
       padding: 10px 20px;
       display: none;
+      opacity: 0;
     }
     .content label {
       width: 100%;
       text-align: center;
       display: none;
+      opacity: 0;
     }
     .content img {
       display: none;
@@ -115,13 +118,13 @@
       animation: showcontent 0.5s ease-in-out 3s 1 forwards;
     }
     input:checked ~ .content .title {
-      animation-delay: 0s!important;
+      animation-delay: 0.5s!important;
     }
     input:checked ~ .content .description {
-      animation-delay: 0.2s!important;
+      animation-delay: 0.7s!important;
     }
     input:checked ~ .content label {
-      animation-delay: 0.4s!important;
+      animation-delay: 0.9s!important;
     }
     @keyframes showcontent {
       from {
