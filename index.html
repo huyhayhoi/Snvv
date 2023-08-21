@@ -72,7 +72,7 @@
       clip-path: polygon(0 100%, 50% 0, 100% 100%);
     }
     .box:hover .content {
-      transform: translate(-50%, -30%);
+      transform: translate(-50%, -10%);
     }
     input {
       position: absolute;
@@ -106,22 +106,22 @@
     .content img {
       display: none;
       opacity: 0;
-      animation: showcontent 1s ease-in-out 0.5s 1 forwards;
     }
     input:checked ~ .content img,
     input:checked ~ .content .title,
     input:checked ~ .content .description,
     input:checked ~ .content label {
       display: block;
+      animation: showcontent 0.5s ease-in-out 3s 1 forwards;
     }
     input:checked ~ .content .title {
-      animation-delay: 0.7s!important;
+      animation-delay: 0s!important;
     }
     input:checked ~ .content .description {
-      animation-delay: 0.9s!important;
+      animation-delay: 0.2s!important;
     }
     input:checked ~ .content label {
-      animation-delay: 0.11s!important;
+      animation-delay: 0.4s!important;
     }
     @keyframes showcontent {
       from {
@@ -139,11 +139,12 @@
         <div class="content">
           <!-- <img src="https://images.unsplash.com/photo-1692364042693-bd5aed6360d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60" alt=""> -->
           <div class="title">
-            Whatever
+            Whateverbigbfdibdibvdfuk
           </div>
           <div class="description">
             Next time I will try better! <br>
-            Thankiu everybody
+            Thankiu everybody <br>
+            dfkvdhfldk
           </div>
           <label for="message">
             Close
